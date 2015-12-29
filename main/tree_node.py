@@ -22,3 +22,16 @@ class TreeNode(object):
         if left_depth > right_depth:
             return left_depth
         return right_depth
+
+    @staticmethod
+    def is_mirror(one, other):
+        if one is None:
+            if other is None:
+                return True
+            else:
+                return False
+        else:
+            if other is None:
+                return False
+            else:
+                return TreeNode.is_mirror(one.left, other.left) & TreeNode.is_mirror(one.right, other.right)

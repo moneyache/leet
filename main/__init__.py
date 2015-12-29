@@ -10,4 +10,4 @@ if __name__ == '__main__':
     left = TreeNode(0)
     root = TreeNode(1)
     root.left = left
-    print(root.depth())
+    print(TreeNode.is_mirror(root, left))
